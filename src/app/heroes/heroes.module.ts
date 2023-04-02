@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 //Components
 import { AddComponent } from './pages/add/add.component';
@@ -11,8 +12,6 @@ import { ListComponent } from './pages/list/list.component';
 //Heroes routing module
 import { HeroesRoutingModule } from './heroes-routing.module';
 
-
-
 @NgModule({
   declarations: [
     AddComponent,
@@ -23,7 +22,8 @@ import { HeroesRoutingModule } from './heroes-routing.module';
   ],
   imports: [
     CommonModule,
-    HeroesRoutingModule
+    FlexLayoutModule,
+    HeroesRoutingModule,
   ]
 })
 export class HeroesModule { }
