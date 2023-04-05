@@ -12,6 +12,9 @@ import { ListComponent } from './pages/list/list.component';
 //Heroes routing module
 import { HeroesRoutingModule } from './heroes-routing.module';
 
+//Material Module
+import { MaterialModule } from '../material/material.module';
+
 @NgModule({
   declarations: [
     AddComponent,
@@ -24,6 +27,7 @@ import { HeroesRoutingModule } from './heroes-routing.module';
     CommonModule,
     FlexLayoutModule,
     HeroesRoutingModule,
+    MaterialModule
   ]
 })
 export class HeroesModule { }
