@@ -1,0 +1,27 @@
+.container {
+    margin: 10px;
+  }
+
+  mat-sidenav {
+    width: 250px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  a .mat-icon {
+    margin: 0 10px;
+    position: relative;
+    bottom: -6px;
+  }
+
+  .spacer {
+    flex: 1 0 auto;
+    width: 100px;
+  }
+
+  .spacer-two {
+    flex: 1 0 auto;
+    width: 100px;
+  }
