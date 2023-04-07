@@ -1,0 +1,156 @@
+mat-card {
+    margin-top: 20px;
+}
+
+.ng-star-inserted {
+    margin-right: 20px;
+}
+
+@media (min-height: 635px) and (max-width: 599px) and (orientation: portrait) {
+    .mdc-card__media {
+        height: 350px;
+        width: auto;
+    }
+
+    .mat-mdc-card {
+        width: 250px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 600px) and (min-height: 635px) {
+    .ng-star-inserted {
+        max-width: 35%;
+    }
+
+    .mdc-card__media {
+        height: 230px;
+    }
+
+    .mat-mdc-card {
+        max-width: 230px;
+        margin: 10px auto;
+        height: 560px;
+    }
+
+    .mdc-card__actions {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .mdc-button {
+        text-align: -webkit-auto;
+    }
+}
+
+@media (min-width: 650px) and (min-height: 635px) {
+    .ng-star-inserted {
+        max-width: 35%;
+    }
+
+    .mdc-card__media {
+        height: 280px;
+    }
+
+    .mat-mdc-card {
+        max-width: 230px;
+        margin: 10px auto;
+        height: 560px;
+    }
+
+    .mdc-card__actions {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .mdc-button {
+        text-align: -webkit-auto;
+    }
+}
+
+@media (min-width: 961px) {
+    .mat-mdc-card {
+        max-width: 230px;
+        margin: 10px auto;
+        height: 600px;
+    }
+
+    .mat-mdc-card-content {
+        display: block;
+        padding: 0 16px;
+        position: relative;
+        top: 3%;
+    }
+
+    .mat-mdc-card-title {
+        font-size: 16px;
+    }
+
+    .mat-mdc-card-subtitle {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 1080px) {
+    .mdc-card__media {
+        height: 300px;
+    }
+
+    .mat-mdc-card-content {
+        position: relative;
+        top: 2%;
+    }
+
+    .mat-mdc-card {
+        max-width: 230px;
+        margin: 10px auto;
+        height: 620px;
+    }
+}
+
+@media (min-width: 1366px) and (min-height: 635px) and (orientation: landscape) {
+    .mat-mdc-card {
+        max-width: 230px;
+        margin: 10px auto;
+        height: 600px;
+    }
+
+    .mdc-card__media {
+        height: 280px;
+        width: auto;
+    }
+
+    .mat-mdc-card-content {
+        position: relative;
+        top: 2%;
+    }
+}
+
+@media (min-width: 1460px) and (orientation: landscape) {
+    .mdc-card__media {
+        height: auto;
+        width: auto;
+    }
+
+    .mat-mdc-card {
+        height: 680px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .mdc-card__media {
+        height: auto;
+        width: auto;
+    }
+
+    .mat-mdc-card {
+        height: 760px;
+        max-width: 320px;
+        place-content: space-around;
+    }
+
+    .mdc-card__actions{
+        position: initial;
+        place-self: center;
+    }
+}
