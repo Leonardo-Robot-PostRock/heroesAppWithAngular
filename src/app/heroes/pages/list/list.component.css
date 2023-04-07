@@ -6,6 +6,10 @@ mat-card {
     margin-right: 20px;
 }
 
+h3{
+    margin: 10px 0 16px;
+}
+
 @media (min-height: 635px) and (max-width: 599px) and (orientation: portrait) {
     .mdc-card__media {
         height: 350px;
@@ -24,7 +28,7 @@ mat-card {
     }
 
     .mdc-card__media {
-        height: 230px;
+        height: 260px;
     }
 
     .mat-mdc-card {
