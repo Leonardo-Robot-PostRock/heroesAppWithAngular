@@ -14,14 +14,16 @@ import { HeroesRoutingModule } from './heroes-routing.module';
 
 //Material Module
 import { MaterialModule } from '../material/material.module';
+import { HeroesCardComponent } from './components/heroes-card/heroes-card.component';
 
 @NgModule({
   declarations: [
     AddComponent,
-    SearchComponent,
     HeroeComponent,
+    HeroesCardComponent,
     HomeComponent,
-    ListComponent
+    ListComponent,
+    SearchComponent,
   ],
   imports: [
     CommonModule,
