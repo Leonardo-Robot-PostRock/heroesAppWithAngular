@@ -15,6 +15,7 @@ import { HeroesRoutingModule } from './heroes-routing.module';
 //Material Module
 import { MaterialModule } from '../material/material.module';
 import { HeroesCardComponent } from './components/heroes-card/heroes-card.component';
+import { ImagePipe } from './pipes/image.pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HeroesCardComponent } from './components/heroes-card/heroes-card.compon
     HomeComponent,
     ListComponent,
     SearchComponent,
+    ImagePipe,
   ],
   imports: [
     CommonModule,
