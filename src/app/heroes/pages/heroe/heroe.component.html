@@ -1,13 +1,11 @@
-<div *ngIf="!heroe; then loading; else divHeroe"></div>
-<ng-template #loading>
-  <mat-grid-list cols="1">
-    <mat-grid-tile>
-      <mat-spinner></mat-spinner>
-    </mat-grid-tile>
-  </mat-grid-list>
-</ng-template>
+<mat-grid-list cols="1" *ngIf="!heroe; else divHeroe">
+  <mat-grid-tile>
+    <mat-spinner></mat-spinner>
+  </mat-grid-tile>
+</mat-grid-list>
 
-<ng-template #divHeroe>
-  {{ heroe | json }}
-  <div fxLayout="row"></div>
+<ng-template #divHeroe> 
+    <div fxLayout="row">
+
+    </div>
 </ng-template>
