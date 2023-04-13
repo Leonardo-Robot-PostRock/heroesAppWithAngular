@@ -15,7 +15,7 @@ export class HeroeComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute, private heroesService: HeroesService) {}
   ngOnInit(): void {
-    this.activatedRoute.params.pipe(switchMap(({ id }) => this.heroesService.getHeroesById(id)),
+    this.activatedRoute.params.pipe(delay(2000)).pipe(switchMap(({ id }) => this.heroesService.getHeroesById(id)),
     ).subscribe((heroe)=>{
       this.heroe = heroe;
     })
