@@ -26,7 +26,7 @@
 
 img {
     width: 50%;
-    border-radius: 100px;
+    border-radius: 50px;
     padding: 10px 0;
 }
 
@@ -35,8 +35,14 @@ img {
     text-align: center;
 }
 
+.mdc-list-item {
+    height: auto;
+    margin: 10px;
+}
+
 p {
     white-space: pre-line;
+    line-height: 30px;
 }
 
 @media(min-height:280px) and (orientation: landscape) {
@@ -104,7 +110,7 @@ p {
     .mdc-list-item {
         height: 100%;
         margin: 10px;
-    }    
+    }
 
     p {
         font-size: 25px;
@@ -113,6 +119,12 @@ p {
 
     .back {
         font-size: 30px;
+    }
+}
+
+@media(min-height:947px) {
+    .container-heroe {
+        margin-top: 0px;
     }
 }
 
@@ -128,8 +140,10 @@ p {
     }
 
     p {
-        font-size: 25px;
+        font-size: 30px;
         font-weight: 300;
+        margin: 10px 0;
+        line-height: 35px;
     }
 
     .back {
