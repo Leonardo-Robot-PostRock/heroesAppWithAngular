@@ -8,27 +8,7 @@ import { Heroe } from '../../interfaces/heroes.interface';
 @Component({
   selector: 'app-heroe',
   templateUrl: './heroe.component.html',
-  styles: [
-    `
-      .main-spinner {
-        height: calc(100vh - 84px);
-        justify-content: center;
-      }
-      
-      .container-spinner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        min-width: 280px;
-      }
-
-      img {
-        width: 45%;
-        border-radius: 5px;
-      }
-    `
-  ]
+  styleUrls: ['heroe.component.css']
 })
 export class HeroeComponent implements OnInit {
   heroe!: Heroe;
