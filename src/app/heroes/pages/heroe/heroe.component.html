@@ -7,27 +7,48 @@
 </div>
 
 <ng-template #divHeroe>
-  <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="30px">
-    <div fxFlex="50">
-      <h1>
-        {{ heroe.superhero }} <small>{{ heroe.alter_ego }}</small>
-      </h1>
-      <mat-divider></mat-divider>
-      <br />
-      <img [src]="heroe | image" [alt]="heroe.superhero" />
+  <div class="main-heroes" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="30px">
+    <div class="container-heroe" fxFlex="100" fxLayout="column" fxLayout.xs="column" fxLayout.sm="column">
+      <div>
+        <h1 class="title">
+          {{ heroe.superhero }} <small>{{ heroe.alter_ego }}</small>
+        </h1>
+      </div>
+      <div fxFlex="100" fxLayoutAlign="center">
+        <br />
+        <mat-divider></mat-divider>
+        <img [src]="heroe | image" [alt]="heroe.superhero" />
+      </div>
     </div>
-    <div fxFlex="50">
-      <h1>{{ heroe.publisher }}</h1>
+
+    <div class="container-description" fxLayout="column" fxFlex="100">
+      <h1 class="title title-publisher">{{ heroe.publisher }}</h1>
       <mat-divider></mat-divider>
-      <mat-list>
-        <mat-list-item>{{ heroe.first_appearance }}</mat-list-item>
-        <mat-list-item>{{ heroe.characters }}</mat-list-item>
-        <mat-list-item>{{ heroe.publisher }}</mat-list-item>
-        <mat-list-item>{{ heroe.alter_ego }}</mat-list-item>
+      <mat-list fxLayoutAlign.lg="start start">
+        <mat-list-item class="first_appearance">
+          <P>
+            {{ heroe.first_appearance }}
+          </P>
+        </mat-list-item>
+        <mat-list-item>
+          <p>
+            {{ heroe.characters }}
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <p>
+            {{ heroe.publisher }}
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <p>
+            {{ heroe.alter_ego }}
+          </p>
+        </mat-list-item>
       </mat-list>
 
       <br />
-      <button mat-button color="warn" (click)="goBack()">Regresar</button>
+      <button class="back" mat-button color="warn" (click)="goBack()">Regresar</button>
     </div>
   </div>
 </ng-template>
