@@ -8,7 +8,7 @@
 
 <ng-template #divHeroe>
   <div class="main-heroes" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="30px">
-    <div class="container-heroe" fxFlex="100" fxLayout="column" fxLayout.xs="column" fxLayout.sm="column">
+    <div class="container-heroe" fxFlex="100" fxFlex.lg="30"  fxLayout="column" fxLayout.xs="column" fxLayout.sm="column">
       <div>
         <h1 class="title">
           {{ heroe.superhero }} <small>{{ heroe.alter_ego }}</small>
@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <div class="container-description" fxLayout="column" fxFlex="100">
+    <div class="container-description" fxLayout="column" fxFlex="100" fxFlex.lg="70">
       <h1 class="title title-publisher">{{ heroe.publisher }}</h1>
       <mat-divider></mat-divider>
       <mat-list fxLayoutAlign.lg="start start">
