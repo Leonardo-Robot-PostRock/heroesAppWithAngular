@@ -1,0 +1,138 @@
+.main-spinner {
+    height: calc(100vh - 84px);
+    justify-content: center;
+}
+
+.container-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-width: 280px;
+}
+
+.main-heroes {
+    min-width: 230px;
+}
+
+.container-heroe {
+    margin-top: 140px;
+}
+
+.title {
+    margin-top: 16px;
+    text-align: center;
+}
+
+img {
+    width: 50%;
+    border-radius: 100px;
+    padding: 10px 0;
+}
+
+.mat-mdc-list {
+    border: solid 3px white;
+    text-align: center;
+}
+
+p {
+    white-space: pre-line;
+}
+
+@media(min-height:280px) and (orientation: landscape) {
+
+    .container-heroe {
+        margin-top: 10px;
+    }
+
+    img {
+        width: 33%;
+    }
+
+    .container-description {
+        margin-top: 0px;
+    }
+
+    .title {
+        font-size: 14px;
+        margin: 0px;
+    }
+
+    p {
+        margin: 0px;
+        font-size: 12px;
+    }
+}
+
+@media(min-height:375px) and (orientation: landscape) {
+
+    .container-heroe {
+        margin-top: 0px;
+    }
+
+    img {
+        width: 40%;
+    }
+}
+
+@media (min-width:400px) and (min-height:635px) and (max-width: 599px) and (orientation: portrait) {
+    .container-heroe {
+        max-width: 364px;
+    }
+}
+
+@media(min-width:600px) and (max-width:1919px) and (min-height: 635px) {
+    img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .container-heroe {
+        margin-top: 0px;
+    }
+
+    .title {
+        margin: 10px 0 0 0;
+        font-size: 30px;
+    }
+
+    .title-publisher {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .mdc-list-item {
+        height: 100%;
+        margin: 10px;
+    }    
+
+    p {
+        font-size: 25px;
+        font-weight: 300;
+    }
+
+    .back {
+        font-size: 30px;
+    }
+}
+
+@media(min-width:1920px) {
+    img {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .title {
+        font-size: 60px;
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: 25px;
+        font-weight: 300;
+    }
+
+    .back {
+        font-size: 40px;
+    }
+}
