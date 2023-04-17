@@ -7,6 +7,9 @@ import { Heroe } from '../../interfaces/heroes.interface';
   templateUrl: './list.component.html',
   styles: [
     `
+      h1 {
+        text-align: center;
+      }
       .ng-star-inserted {
         margin-right: 20px;
       }
