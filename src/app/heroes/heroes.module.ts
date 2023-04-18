@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FlexLayoutModule } from '@angular/flex-layout';
 
 //Components
 import { AddComponent } from './pages/add/add.component';
@@ -30,7 +29,6 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    FlexLayoutModule,
     HeroesRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
