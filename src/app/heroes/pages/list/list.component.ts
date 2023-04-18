@@ -19,7 +19,7 @@ import { Heroe } from '../../interfaces/heroes.interface';
 export class ListComponent implements OnInit {
   constructor(private heroesService: HeroesService) {}
 
-  heroes: Heroe[] = [];
+  public heroes: Heroe[] = [];
 
   ngOnInit(): void {
     this.heroesService.getHeroes().subscribe((heroes: Heroe[]) => (this.heroes = heroes));
