@@ -3,9 +3,8 @@
 <br />
 
 
-<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="20px">
-  <div fxFlex="20" fxFlex.lg="15" fxFlex.xs="10" fxFlex.sm="30" *ngFor="let heroe of heroes">
-    
+<div class="grid bm-8 justify-content-center">
+  <div class="col-12 sm:col-4 md:col-3 xl:col-2 justify-items-center" *ngFor="let heroe of heroes">
     <app-heroes-card [heroe]="heroe"></app-heroes-card>
   </div>
 </div>
