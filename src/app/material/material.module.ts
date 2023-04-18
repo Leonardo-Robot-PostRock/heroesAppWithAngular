@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 //Angular material
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
@@ -17,6 +18,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   exports: [
     MatButtonModule,
     MatCardModule,
+    MatChipsModule,
     MatFormFieldModule,
     MatGridListModule,
     MatIconModule,
