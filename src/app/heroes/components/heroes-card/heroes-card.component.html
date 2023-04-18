@@ -3,17 +3,28 @@
     <mat-card-title>{{ heroe.superhero }}</mat-card-title>
     <mat-card-subtitle>{{ heroe.alter_ego }}</mat-card-subtitle>
   </mat-card-header>
+  
   <img mat-card-image [src]="heroe | image" [alt]="heroe.characters" />
-  <mat-card-content>
-    <h3>{{ heroe.publisher }}</h3>
-    <div class="apparition-characters">
-      <strong>First apparition</strong> {{ heroe.first_appearance }}
-      <br />
-      <strong>Characters</strong> {{ heroe.characters }}
-    </div>
+
+  <mat-card-content class="mt-2">
+    <h4>{{ heroe.publisher }}</h4>
+    <p><strong>First appearance</strong> {{ heroe.first_appearance }}</p>
+    <br>
+    <mat-chip-listbox>
+      <mat-chip *ngFor="let name of heroe.characters.split(',') | slice:0:3">
+        {{ name }}
+      </mat-chip>
+    </mat-chip-listbox>
   </mat-card-content>
+
+  <mat-divider></mat-divider>
+
   <mat-card-actions>
-    <button mat-button color="warn" [routerLink]="['/heroes', heroe.id]">Leer más...</button>
-    <button mat-button color="info" [routerLink]="['/heroes/edit', heroe.id]">Editar</button>
+    <button mat-button mat-raised color="primary" [routerLink]="['/heroes/edit', heroe.id]">
+      <mat-icon>edit</mat-icon>Editar
+    </button>
+    <button mat-button color="warn" [routerLink]="['/heroes', heroe.id]">
+      Read more<mat-icon>more_horiz</mat-icon>
+    </button>
   </mat-card-actions>
 </mat-card>
