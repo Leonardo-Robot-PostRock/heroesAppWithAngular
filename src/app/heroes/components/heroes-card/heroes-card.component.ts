@@ -1,11 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Heroe } from '../../interfaces/heroes.interface';
 
 @Component({
   selector: 'app-heroes-card',
-  templateUrl: './heroes-card.component.html',
-  styleUrls: ['./heroes-card.component.css']
+  templateUrl: './heroes-card.component.html'
 })
-export class HeroesCardComponent {
+export class HeroesCardComponent implements OnInit {
   @Input() heroe!: Heroe;
+
+  ngOnInit(): void {
+    if (!this.heroe) throw Error('Hero property is required');
+  }
 }
