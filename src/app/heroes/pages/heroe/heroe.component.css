@@ -11,3 +11,12 @@
     justify-content: center;
     min-width: 280px;
 }
+
+.mat-mdc-list-item:not(.mat-mdc-list-item-interactive) {
+    height: max-content;
+}
+
+.hero-characters {
+    margin: 10px 0;
+    white-space: pre-line;
+}
