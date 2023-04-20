@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { delay, switchMap } from 'rxjs';
 
 import { HeroesService } from '../../services/heroes.service';
-import { Heroe } from '../../interfaces/heroes.interface';
+import { Hero } from '../../interfaces/heroes.interface';
 
 @Component({
   selector: 'app-heroe',
@@ -11,7 +11,7 @@ import { Heroe } from '../../interfaces/heroes.interface';
   styleUrls: ['heroe.component.css']
 })
 export class HeroeComponent implements OnInit {
-  heroe!: Heroe;
+  public hero!: Hero;
 
   constructor(private activatedRoute: ActivatedRoute, private heroesService: HeroesService, private router: Router) {}
   ngOnInit(): void {
@@ -20,8 +20,10 @@ export class HeroeComponent implements OnInit {
         delay(1000),
         switchMap(({ id }) => this.heroesService.getHeroesById(id))
       )
-      .subscribe((heroe) => {
-        this.heroe = heroe;
+      .subscribe((hero) => {
+        if (!hero) return this.router.navigate(['/heroes/list']);
+        this.hero = hero;
+        return;
       });
   }
 
