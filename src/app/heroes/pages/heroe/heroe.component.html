@@ -1,54 +1,36 @@
-<div fxLayout="column" class="main-spinner">
-  <div fxLayout="row" *ngIf="!heroe; else divHeroe">
-    <div fxFlex="100" class="container-spinner">
+<ng-template #divLoading>
+  <div class="main-spinner">
+    <div class="container-spinner">
       <mat-spinner></mat-spinner>
     </div>
   </div>
-</div>
+</ng-template>
 
-<ng-template #divHeroe>
-  <div class="main-heroes" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="30px">
-    <div class="container-heroe" fxFlex="100" fxFlex.lg="30"  fxLayout="column" fxLayout.xs="column" fxLayout.sm="column">
-      <div>
-        <h1 class="title">
-          {{ heroe.superhero }} <small>{{ heroe.alter_ego }}</small>
-        </h1>
-      </div>
-      <div fxFlex="100" fxLayoutAlign="center">
-        <br />
-        <mat-divider></mat-divider>
-        <img [src]="heroe | image" [alt]="heroe.superhero" />
-      </div>
-    </div>
+<div *ngIf="hero; else divLoading" class="grid justify-content-center align-content-center mt-2 md:mt-8 p-2">
+  <mat-card class="col-12 md:col-5 mb-2 md:mb-0 md:mr-2 h-full">
+    <mat-card-header class="justify-content-center text-center">
+      <mat-card-title>{{ hero.alter_ego }}</mat-card-title>
+      <mat-card-title>{{ hero.superhero }}</mat-card-title>
+    </mat-card-header>
 
-    <div class="container-description" fxLayout="column" fxFlex="100" fxFlex.lg="70">
-      <h1 class="title title-publisher">{{ heroe.publisher }}</h1>
-      <mat-divider></mat-divider>
-      <mat-list fxLayoutAlign.lg="start start">
-        <mat-list-item class="first_appearance">
-          <P>
-            {{ heroe.first_appearance }}
-          </P>
-        </mat-list-item>
-        <mat-list-item>
-          <p>
-            {{ heroe.characters }}
-          </p>
-        </mat-list-item>
-        <mat-list-item>
-          <p>
-            {{ heroe.publisher }}
-          </p>
-        </mat-list-item>
-        <mat-list-item>
-          <p>
-            {{ heroe.alter_ego }}
-          </p>
-        </mat-list-item>
+    <img
+      class="col-6 sm:col-4 sm:w-5 md:w-5 align-self-center"
+      [src]="hero | image"
+      [alt]="hero.superhero"
+      mat-card-image
+    />
+  </mat-card>
+
+  <mat-card class="col-12 md:col-6 justify-content-center">
+    <mat-card-content class="justify-content-center flex flex-column">
+      <mat-list class="text-center">
+        <mat-list-item>{{ hero.first_appearance }}</mat-list-item>
+        <mat-list-item>{{ hero.characters }}</mat-list-item>
+        <mat-list-item>{{ hero.publisher }}</mat-list-item>
+        <mat-list-item>{{ hero.alter_ego }}</mat-list-item>
       </mat-list>
 
-      <br />
-      <button class="back" mat-button color="warn" (click)="goBack()">Regresar</button>
-    </div>
-  </div>
-</ng-template>
+      <button mat-button color="warn" (click)="goBack()">Regresar</button>
+    </mat-card-content>
+  </mat-card>
+</div>
