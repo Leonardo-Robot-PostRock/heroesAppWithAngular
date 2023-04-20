@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroesService } from '../../services/heroes.service';
-import { Heroe } from '../../interfaces/heroes.interface';
+import { Hero } from '../../interfaces/heroes.interface';
 
 @Component({
   selector: 'app-list',
@@ -19,9 +19,9 @@ import { Heroe } from '../../interfaces/heroes.interface';
 export class ListComponent implements OnInit {
   constructor(private heroesService: HeroesService) {}
 
-  public heroes: Heroe[] = [];
+  public heroes: Hero[] = [];
 
   ngOnInit(): void {
-    this.heroesService.getHeroes().subscribe((heroes: Heroe[]) => (this.heroes = heroes));
+    this.heroesService.getHeroes().subscribe((heroes: Hero[]) => (this.heroes = heroes));
   }
 }
