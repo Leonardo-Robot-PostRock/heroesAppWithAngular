@@ -25,7 +25,11 @@
     <mat-card-content class="justify-content-center flex flex-column">
       <mat-list class="text-center">
         <mat-list-item>{{ hero.first_appearance }}</mat-list-item>
-        <mat-list-item>{{ hero.characters }}</mat-list-item>
+        <mat-list-item>
+          <p class="hero-characters">
+            {{ hero.characters }}
+          </p>
+        </mat-list-item>
         <mat-list-item>{{ hero.publisher }}</mat-list-item>
         <mat-list-item>{{ hero.alter_ego }}</mat-list-item>
       </mat-list>
