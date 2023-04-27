@@ -1,5 +1,5 @@
 {
-  "usuarios": [
+  "users": [
     {
       "id": 1,
       "usuario": "John Doe",
@@ -7,6 +7,14 @@
     }
   ],
   "heroes": [
+    {
+      "id": "dc-batman",
+      "superhero": "Batman",
+      "publisher": "DC Comics",
+      "alter_ego": "Bruce Wayne",
+      "first_appearance": "Detective Comics #27",
+      "characters": "Bruce Wayne"
+    },
     {
       "id": "dc-superman",
       "superhero": "Superman",
@@ -158,6 +166,33 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "id": "jr9PAVI",
+      "superhero": "Winter Soldier",
+      "publisher": "Marvel Comics",
+      "alter_ego": "James Buchanan Barnes",
+      "first_appearance": "Captain America Comics #1",
+      "characters": "Bucky Winter Soldier",
+      "alt_img": "https://media.cnn.com/api/v1/images/stellar/prod/121223105624-winter-soldier-comics.jpg?q=w_900,h_1366,x_0,y_0,c_fill/w_1280"
+    },
+    {
+      "id": "_5GxbY3",
+      "superhero": "Winter Soldier",
+      "publisher": "Marvel Comics",
+      "alter_ego": "James Buchanan Barnes",
+      "first_appearance": "Captain America Comics #1",
+      "characters": "Bucky Winter Soldier",
+      "alt_img": "https://media.cnn.com/api/v1/images/stellar/prod/121223105624-winter-soldier-comics.jpg?q=w_900,h_1366,x_0,y_0,c_fill/w_1280"
+    },
+    {
+      "id": "M4Rgr6U",
+      "superhero": "Hawkgirl",
+      "publisher": "DC Comics",
+      "alter_ego": "Shiera Sanders Hall",
+      "first_appearance": "Flash Comics #1",
+      "characters": "Shiera Sanders Hall, Shayera Hol, Kendra Saunders",
+      "alt_img": "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:376/h:577/q:75/https://bleedingcool.com/wp-content/uploads/2023/03/unnamed-42.jpg"
     }
   ]
 }
