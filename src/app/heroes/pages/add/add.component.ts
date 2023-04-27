@@ -2,11 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
+//rxjs
+import { switchMap } from 'rxjs';
+
+//heroesService
 import { HeroesService } from '../../services/heroes.service';
 
+//Interfaces
 import { Publisher } from '../../interfaces/heroes.interface';
 import { Hero } from '../../interfaces/heroes.interface';
-import { switchMap } from 'rxjs';
+
+//Angular material
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-add',
@@ -35,7 +42,12 @@ export class AddComponent implements OnInit {
     }
   ];
 
-  constructor(private heroesService: HeroesService, private activatedRoute: ActivatedRoute, private router: Router) {}
+  constructor(
+    private heroesService: HeroesService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+    private snackbar: MatSnackBar
+  ) {}
 
   get currentHero(): Hero {
     const hero = this.heroForm.value as Hero;
@@ -58,13 +70,19 @@ export class AddComponent implements OnInit {
 
     if (this.currentHero.id) {
       this.heroesService.updateHero(this.currentHero).subscribe((hero) => {
-        //TODO mostrar snackbar
+        this.showSnackBar(`${hero.superhero} updated!`);
       });
       return;
     }
     this.heroesService.addHero(this.currentHero).subscribe((hero) => {
-      //TODO mostrar snackbar, y navegar a /heroes/edit/hero.id
+      this.router.navigate(['/heroes/edit', hero.id]);
+      this.showSnackBar(`${hero.superhero} created!`);
     });
-    // this.heroesService.updateHero(this.heroForm.value);
+  }
+
+  showSnackBar(message: string): void {
+    this.snackbar.open(message, 'done', {
+      duration: 2500
+    });
   }
 }
