@@ -51,9 +51,7 @@
   </div>
   <div class="col-12 sm:col-6">
     <mat-card>
-      <img src="" alt="hero image" />
+      <img [src]="currentHero | image" alt="hero image" />
     </mat-card>
   </div>
 </div>
-
-{{ currentHero | json }}
