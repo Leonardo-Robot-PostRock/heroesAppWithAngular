@@ -36,7 +36,6 @@ export class AddComponent {
 
   get currentHero(): Hero {
     const hero = this.heroForm.value as Hero;
-    console.log(hero);
     return hero;
   }
 
