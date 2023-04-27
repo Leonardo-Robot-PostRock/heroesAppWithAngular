@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { HeroesService } from '../../services/heroes.service';
+
 import { Publisher } from '../../interfaces/heroes.interface';
+import { Hero } from '../../interfaces/heroes.interface';
 
 @Component({
   selector: 'app-add',
@@ -29,11 +32,17 @@ export class AddComponent {
     }
   ];
 
+  constructor(private heroesService: HeroesService) {}
+
+  get currentHero(): Hero {
+    const hero = this.heroForm.value as Hero;
+    console.log(hero);
+    return hero;
+  }
+
   onSubmit(): void {
-    
-    console.log({
-      formIsValid: this.heroForm.valid,
-      value: this.heroForm.value
-    });
+    if (this.heroForm.invalid) return;
+
+    // this.heroesService.updateHero(this.heroForm.value);
   }
 }
