@@ -45,12 +45,12 @@ export class AddComponent implements OnInit {
   ngOnInit(): void {
     if (!this.router.url.includes('edit')) return;
 
-    this.activatedRoute.params.pipe(switchMap(({ id }) => this.heroesService.getHeroesById(id)),).subscribe((hero)=>{
-      if(!hero) return this.router.navigate(['/']);
-      
-      this.heroForm.reset(hero)
+    this.activatedRoute.params.pipe(switchMap(({ id }) => this.heroesService.getHeroesById(id))).subscribe((hero) => {
+      if (!hero) return this.router.navigate(['/']);
+
+      this.heroForm.reset(hero);
       return;
-    })
+    });
   }
 
   onSubmit(): void {
