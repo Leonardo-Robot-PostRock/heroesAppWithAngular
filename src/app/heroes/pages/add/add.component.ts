@@ -95,6 +95,7 @@ export class AddComponent implements OnInit {
 
       if (this.currentHero && this.currentHero.id) {
         this.heroesService.deleteHero(this.currentHero.id);
+        this.router.navigate(['/heroes'])
       }
     });
   }
