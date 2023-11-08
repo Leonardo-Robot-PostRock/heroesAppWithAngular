@@ -44,7 +44,8 @@
         </form>
 
         <div class="flex justify-content-between">
-          <button *ngIf="currentHero.id" mat-flat-button color="warn"><mat-icon>delete</mat-icon> Delete</button>
+          <button *ngIf="currentHero.id" mat-flat-button color="warn"
+            (click)="onDeleteHero()"><mat-icon>delete</mat-icon> Delete</button>
           <span></span>
           <button mat-flat-button color="primary" (click)="onSubmit()"><mat-icon>save</mat-icon> Save</button>
         </div>
