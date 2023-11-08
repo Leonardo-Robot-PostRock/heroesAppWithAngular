@@ -8,7 +8,7 @@ import { HeroeComponent } from './pages/heroe/heroe.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListComponent } from './pages/list/list.component';
 import { HeroesCardComponent } from './components/heroes-card/heroes-card.component';
-import { ConfirDialogComponent } from './components/confir-dialog/confir-dialog.component';
+import { ConfirmDialogComponent } from './components/confir-dialog/confirm-dialog.component';
 
 //Heroes routing module
 import { HeroesRoutingModule } from './heroes-routing.module';
@@ -27,7 +27,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ListComponent,
     SearchComponent,
     ImagePipe,
-    ConfirDialogComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     CommonModule,
