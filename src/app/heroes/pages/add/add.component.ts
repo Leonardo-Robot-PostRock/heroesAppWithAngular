@@ -14,6 +14,8 @@ import { Hero } from '../../interfaces/heroes.interface';
 
 //Angular material
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from '../../components/confir-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-add',
@@ -46,8 +48,9 @@ export class AddComponent implements OnInit {
     private heroesService: HeroesService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private snackbar: MatSnackBar
-  ) {}
+    private snackbar: MatSnackBar,
+    private dialog: MatDialog
+  ) { }
 
   get currentHero(): Hero {
     const hero = this.heroForm.value as Hero;
@@ -77,6 +80,22 @@ export class AddComponent implements OnInit {
     this.heroesService.addHero(this.currentHero).subscribe((hero) => {
       this.router.navigate(['/heroes/edit', hero.id]);
       this.showSnackBar(`${hero.superhero} created!`);
+    });
+  }
+
+  onDeleteHero() {
+    if (!this.currentHero.id) throw Error('Hero id is required');
+
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      data: this.heroForm.value,
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (!result) return;
+
+      if (this.currentHero && this.currentHero.id) {
+        this.heroesService.deleteHero(this.currentHero.id);
+      }
     });
   }
 
